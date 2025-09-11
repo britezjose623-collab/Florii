@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Feliz cumpleaños Florencia Marisol Sánchez Acosta</title>
+
+<!-- Tipografía elegante -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg1: #fff7f9;
+    --bg2: #fff0ea;
+    --accent: #ff4d7e;
+    --accent2: #ff8fb1;
+    --text: #2b2430;
+    --muted: #6b5b66;
+  }
+  html,body{
+    height:100%;
+    margin:0;
+    font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(160deg, var(--bg1) 0%, var(--bg2) 100%);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+
+  .wrap{
+    min-height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:28px;
+    box-sizing:border-box;
+  }
+
+  .card{
+    width:100%;
+    max-width:980px;
+    background:rgba(255,255,255,0.88);
+    border-radius:20px;
+    padding:34px;
+    box-shadow: 0 12px 40px rgba(38,24,44,0.12);
+    position:relative;
+    overflow:hidden;
+    text-align:center;
+  }
+
+  .card::before{
+    content:"";
+    position:absolute;
+    width:560px;
+    height:560px;
+    right:-120px;
+    top:-180px;
+    background: radial-gradient(circle at 30% 30%, rgba(255,141,177,0.18), rgba(255,77,126,0.06) 40%, transparent 60%);
+    transform: rotate(-20deg);
+    pointer-events:none;
+  }
+
+  h1{
+    margin:0;
+    font-family: "Playfair Display", serif;
+    font-size:46px;
+    line-height:1.02;
+    color:var(--text);
+    letter-spacing: -0.5px;
+    font-weight:700;
+    text-shadow: 0 6px 18px rgba(255,141,177,0.08);
+  }
+
+  .name{
+    display:block;
+    margin-top:6px;
+    font-size:54px;
+    color:var(--accent);
+    font-weight:800;
+    letter-spacing:-1px;
+  }
+
+  p.lead{
+    margin:18px 0 22px;
+    font-size:20px;
+    color:var(--muted);
+    max-width:86%;
+    margin-left:auto;
+    margin-right:auto;
+    line-height:1.45;
+  }
+
+  .big-love{
+    display:inline-block;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--accent2) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color:transparent;
+    font-family:"Montserrat",sans-serif;
+    font-weight:800;
+    font-size:28px;
+    margin-top:10px;
+  }
+
+  .heart{
+    display:inline-block;
+    margin-left:10px;
+    font-size:36px;
+    vertical-align:middle;
+    transform-origin:center;
+    animation: beat 1.1s infinite;
+  }
+  @keyframes beat{
+    0%{ transform: scale(1); }
+    30%{ transform: scale(1.15); }
+    60%{ transform: scale(0.98); }
+    100%{ transform: scale(1); }
+  }
+
+  .footer-note{
+    margin-top:22px;
+    color:var(--muted);
+    font-size:14px;
+  }
+
+  @media (max-width:600px){
+    h1{ font-size:28px; }
+    .name{ font-size:32px; }
+    p.lead{ font-size:16px; max-width:100%; }
+    .card{ padding:22px; border-radius:16px; }
+  }
+
+  #confettiCanvas{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .card > * { position:relative; z-index:2; }
+
+  /* Botón de música flotante */
+  #playPauseBtn {
+    position: fixed; 
+    top: 20px; 
+    right: 20px; 
+    z-index: 1000;
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    border: none; 
+    background-color: rgba(255,20,147,0.8); 
+    color: white; 
+    font-size: 28px; 
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+</style>
+</head>
+
+<body>
+
+<!-- Reemplaza "Soy Luna - Eres.mp3" por el nombre de tu archivo de música -->
+<audio id="miAudio" src="Soy Luna - Eres.mp3" loop></audio>
+<button id="playPauseBtn">▶️</button>
+
+<div class="wrap">
+  <div class="card" role="main" aria-label="Felicitación de cumpleaños">
+    <canvas id="confettiCanvas"></canvas>
+
+    <h1>Feliz cumpleaños<br>
+      <span class="name">Florencia Marisol Sánchez Acosta - Mi Tikitita </span>
+    </h1>
+
+    <p class="lead">
+       Que la pases super super bien, Te amo muchisimo, sos una persona super increible, que me genero muchisimas risas, hermosos recuerdos tengo contigo y gracias a ti.
+        por mucho tiempo hiciste que mi vida tenga sentido, sea bonito, y que mi etapa del colegio sea precioso, siempre vas a estar en mi corazon.
+        Que Dios guie siempre tu camino, te bendida a ti y a tus seres queridos. Y que la pases de puta madre hoy!
+    </p>
+
+    <div class="big-love">Con todo mi cariño, te deseo todo lo mejor del mundo <span class="heart">❤️</span></div>
+
+    <p class="footer-note">— ¡Que este día sea tan hermoso como vos! —</p>
+  </div>
+</div>
+
+<script>
+/* Confetti animation */
+(function(){
+  const canvas = document.getElementById('confettiCanvas');
+  const ctx = canvas.getContext('2d');
+  let W,H,pieces=[];
+
+  function resize(){ W = canvas.width = canvas.clientWidth; H = canvas.height = canvas.clientHeight; }
+  window.addEventListener('resize', resize);
+  resize();
+
+  function rand(min,max){ return Math.random()*(max-min)+min; }
+
+  function initPieces(count){
+    pieces=[];
+    const colors=['#FF4D7E','#FF8FB1','#FFD166','#FFC4E1','#A0E7E5'];
+    for(let i=0;i<count;i++){
+      pieces.push({
+        x: rand(0,W), y: rand(-H,0),
+        w: rand(6,12), h: rand(8,18),
+        angle: rand(0,Math.PI*2), spin: rand(-0.1,0.1),
+        vx: rand(-0.6,0.6), vy: rand(1,3),
+        color: colors[Math.floor(rand(0,colors.length))],
+        rot: rand(0,Math.PI*2), opacity: rand(0.8,1)
+      });
+    }
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    for(let p of pieces){
+      ctx.save();
+      ctx.translate(p.x,p.y);
+      ctx.rotate(p.rot);
+      ctx.fillStyle = p.color;
+      ctx.globalAlpha = p.opacity;
+      ctx.fillRect(-p.w/2, -p.h/2, p.w, p.h);
+      ctx.restore();
+
+      p.x += p.vx;
+      p.y += p.vy;
+      p.rot += p.spin;
+
+      if(p.y > H + 30 || p.x < -60 || p.x > W + 60){
+        p.x = rand(0,W);
+        p.y = rand(-H, -10);
+        p.vx = rand(-0.6,0.6);
+        p.vy = rand(1,3);
+        p.opacity = rand(0.8,1);
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+
+  initPieces(120);
+  draw();
+
+  setInterval(()=> {
+    for(let i=0;i<12;i++){
+      const p = pieces[Math.floor(Math.random()*pieces.length)];
+      p.x = rand(0,W);
+      p.y = rand(-H*0.6, -10);
+      p.vx = rand(-0.6,0.6);
+      p.vy = rand(1,3.5);
+      p.color = ['#FF4D7E','#FF8FB1','#FFD166','#FFC4E1','#A0E7E5'][Math.floor(rand(0,5))];
+      p.opacity = rand(0.85,1);
+    }
+  }, 1400);
+})();
+
+/* Control de música */
+const audio = document.getElementById('miAudio');
+const btn = document.getElementById('playPauseBtn');
+let playing = false;
+
+btn.addEventListener('click', ()=>{
+  if(!playing){
+    audio.play();
+    btn.textContent = "⏸";
+    playing = true;
+  } else {
+    audio.pause();
+    btn.textContent = "▶️";
+    playing = false;
+  }
+});
+</script>
+</body>
+</html>
